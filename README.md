@@ -15,7 +15,19 @@ The goal of NutriChat is to enable users to query a comprehensive nutrition text
 - **Response Generation:** Constructs prompts from the retrieved text and generates responses using the Google Gemma-2B-IT language model, providing contextually accurate answers.
 - **Scalable Storage:** Features an efficient storage system for managing embeddings, allowing for quick retrieval and response generation from large-scale documents.
 
-## Installation
+Local RAG pipeline we're going to build:
 
-Details will be uploaded soon.
+The flowchart illustrates a Retrieval-Augmented Generation (RAG) workflow executed on a Colab GPU for document processing and embedding creation, followed by search and answer generation. The workflow starts with a collection of documents, such as PDFs or large textbooks, which are split into smaller chunks (e.g., 10 sentences each). These segments act as context for the Large Language Model (LLM).
+
+A user may ask a question like "What are macronutrients?" This query is converted into a numerical representation using an embedding model (e.g., Hugging Face’s sentence transformers), which is stored in a torch.tensor format for efficiency, especially for handling large amounts of embeddings. In cases of extremely large datasets, a vector database or index can be used.
+
+The numerical query and relevant document chunks are processed on a Colab GPU, and the LLM generates an output based on the context retrieved. The generated output can then be interacted with via an optional chat web app.
+
+All the document processing, embedding, and response generation happen on a GPU provided by Google Colab.
+
+In our specific example, we'll build NutriChat, a RAG workflow that allows a person to query a 1200 page PDF version of a Nutrition Textbook and have an LLM generate responses back to the query based on passages of text from the textbook.
+
+PDF source: https://pressbooks.oer.hawaii.edu/humannutrition2/ 
+
+You can also run notebook `00-simple-local-rag.ipynb` directly in [Google Colab](https://github.com/Naveensadanandan/Local_Retrieval_Augmented-Generation/blob/main/Local_Retrieval_Augmented_Generation_RAG.ipynb). 
 
