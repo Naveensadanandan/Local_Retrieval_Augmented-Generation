@@ -2,7 +2,7 @@
 
 # NutriChat: Local Retrieval Augmented Generation System for Nutrition Textbooks
 
-**NutriChat** is an advanced Local Retrieval Augmented Generation (RAG) system designed to interact with a 1200-page PDF Nutrition Textbook. This project leverages cutting-edge natural language processing (NLP) and machine learning techniques to provide accurate and contextually relevant responses to user queries based on the textbook's content.
+**NutriChat** is an advanced Local Retrieval Augmented Generation (RAG) system designed to interact with a  Nutrition Textbook. This project leverages  natural language processing (NLP) and LLMs to provide accurate and contextually relevant responses to user queries based on the textbook's content.
 
 ## Project Overview
 
